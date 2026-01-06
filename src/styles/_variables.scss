@@ -1,0 +1,88 @@
+@use "@styles/_functions.scss" as *;
+
+/*
+ * Colors
+ */
+$white: #ffffff;
+$black: #000000;
+$paragraph1-color: #000000;
+$button-color: #ee10b0;
+$text-color: #ffffff;
+$form-background-color: #53063e;
+$span-color: #0e9eef;
+$text-melosies-color: linear-gradient(
+  90.07deg,
+  #ee10b0 -4.82%,
+  rgba(14, 158, 239, 0.92) 127.01%
+);
+$herz-border-color: #ee10b0;
+
+/*
+ * Typography
+ */
+
+// Font family
+$font-primary: "Vazirmatn", sans-serif;
+
+// Base font size
+$font-base: pxToRem(16);
+
+// Font weights
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium-light: 500;
+$font-weight-medium: 600;
+$font-weight-semibold: 700;
+$font-weight-bold: 800;
+$font-weight-black: 900;
+
+/*T1 typography */
+// Typography scale
+$font-size-t1: 2.5rem;
+$font-weight-t1: $font-weight-semibold;
+$line-height-t1: 1.2;
+
+/* Headings / H1 - Bold - 32 */
+$h1-size: pxToRem(32);
+$h1-weight: $font-weight-medium;
+$font-family-h1: $font-primary;
+
+/* Headings / H2 - Bold - 24 */
+$h2-size: pxToRem(24);
+$h2-weight: $font-weight-medium;
+$font-family-h2: $font-primary;
+
+/* Headings / H3 - Bold - 20 */
+$h3-size: pxToRem(20);
+$h3-weight: $font-weight-medium;
+$font-family-h3: $font-primary;
+
+/* Headings / H4 - Bold - 16px */
+$h4-size: pxToRem(16);
+$h4-weight: $font-weight-medium-light;
+$font-family-h4: $font-primary;
+
+/* Paragraph / 1 - small- 12 */
+$p1-size: pxToRem(12);
+$p1-weight: $font-weight-light;
+$font-family-p1: $font-primary;
+
+/* Paragraph / 2 - medium- 16 */
+$p2-size: pxToRem(16);
+$p2-weight: $font-weight-regular;
+$font-family-p2: $font-primary;
+
+/*
+ * Breakpoints
+ */
+$desktop-xxl: pxToRem(1920);
+$desktop-xl: pxToRem(1600);
+$desktop-l: pxToRem(1440);
+$desktop-m: pxToRem(1200);
+$desktop-s: pxToRem(1024);
+$tablet-l: pxToRem(992);
+$tablet-m: pxToRem(768);
+$tablet-s: pxToRem(640);
+$mobile-l: pxToRem(576);
+$mobile-m: pxToRem(480);
+$mobile-s: pxToRem(320);
