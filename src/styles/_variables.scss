@@ -1,9 +1,10 @@
-@use "@styles/_functions.scss" as *;
+@use "./functions" as *;
 
 /*
  * Colors
  */
 $white: #ffffff;
+$sidebar-color: #181818;
 $black: #000000;
 $paragraph1-color: #000000;
 $button-color: #ee10b0;
@@ -44,7 +45,7 @@ $line-height-t1: 1.2;
 
 /* Headings / H1 - Bold - 32 */
 $h1-size: pxToRem(32);
-$h1-weight: $font-weight-medium;
+$h1-weight: $font-weight-semibold;
 $font-family-h1: $font-primary;
 
 /* Headings / H2 - Bold - 24 */

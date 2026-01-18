@@ -1,9 +1,7 @@
 import Button from "./Components/Buttons/Button";
 
 function App() {
-  return <>
-    <Button />
-  </>;
+  return <></>;
 }
 
 export default App;
