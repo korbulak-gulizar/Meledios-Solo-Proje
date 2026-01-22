@@ -43,7 +43,7 @@ interface SidebarSectionProps {
 
 function SidebarSection({ section }: SidebarSectionProps) {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
   // ekran boyutu değişince güncelle
