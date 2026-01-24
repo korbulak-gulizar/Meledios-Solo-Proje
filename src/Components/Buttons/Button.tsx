@@ -1,11 +1,23 @@
 import React from "react";
 import styles from "./Button.module.scss";
 
-const Button = () => {
+type ButtonProbs = {
+  variant?: string;
+  label?: string;
+  icon?: React.ReactNode;
+  className?: string;
+};
+
+const Button = ({ variant, label, icon, className }: ButtonProbs) => {
   return (
-    <div className={styles.btn_container}>
-      <button className={styles.btn}>Click Me</button>
-    </div>
+    <button
+      className={`${styles.btn} ${styles[variant || "primary"]}${
+        className || ""
+      }`}
+    >
+      {icon && <span className={styles.icon}>{icon}</span>}
+      {label}
+    </button>
   );
 };
 

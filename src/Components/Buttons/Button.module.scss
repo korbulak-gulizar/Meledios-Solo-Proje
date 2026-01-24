@@ -1,14 +1,212 @@
-@use '../../styles/mixins' as *;
+@use "../../styles/mixins" as *;
+@use "/src/styles/variables" as *;
 
 .btn_container {
-        background-color: pink;
-        @include flex-center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
+  background-color: pink;
+  @include flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .btn {
+    border-radius: 4px;
+    min-width: 160px;
+    min-height: 36px;
+  }
+}
 
-    .btn{
-        background-color:red
-    }
+.primary {
+  background-color: #ee10b0;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  min-width: 160px;
+  min-height: 36px;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: 14px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+
+.secondary {
+  background-color: transparent;
+  border: 2px solid #ee10b0;
+  color: #ee10b0;
+  padding: 6px 16px;
+
+  cursor: pointer;
+  font-family: 14px;
+  border-radius: 4px;
+  min-width: 160px;
+  min-height: 36px;
+  font-family: $font-primary;
+  font-weight: 300;
+  font-size: 14px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+.createPlayList {
+  background-color: transparent;
+  border: 2px solid #0e9eef;
+  color: #0e9eef;
+  padding: 6px 16px;
+
+  cursor: pointer;
+  font-family: 14px;
+  border-radius: 4px;
+  min-width: 160px;
+  min-height: 36px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 16px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+.discoverNow {
+  background-color: #ee10b0;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  cursor: pointer;
+  font-family: 16px;
+  border-radius: 4px;
+  min-width: 160px;
+  min-height: 36px;
+  font-family: $font-primary;
+  font-weight: 500;
+  font-size: 14px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+
+.blueSignUp {
+  background-color: #0e9eef;
+  color: white;
+  padding: 6px 16px;
+  border: none;
+  cursor: pointer;
+  font-family: 16px;
+  border-radius: 4px;
+  min-width: 56px;
+  min-height: 25px;
+  font-family: $font-primary;
+  font-weight: 700;
+  font-size: 14px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+
+.google {
+  background-color: #181818;
+  color: white;
+  padding: 6px 16px;
+  border: 2px solid white;
+  cursor: pointer;
+  font-family: 16px;
+  border-radius: 20px;
+  min-width: 185px;
+  min-height: 42px;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+
+.facebook {
+  background-color: #181818;
+  color: white;
+  padding: 6px 16px;
+  border: 2px solid white;
+  cursor: pointer;
+  font-family: 16px;
+  border-radius: 20px;
+  min-width: 185px;
+  min-height: 42px;
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 20px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    background: linear-gradient(
+      90.07deg,
+      #ee10b0 -4.82%,
+      rgba(14, 158, 239, 0.92) 127.01%
+    );
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px #0e9eef;
+  }
 }
