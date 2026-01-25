@@ -4,11 +4,14 @@ import {
   GoogleIcon,
 } from "../../Components/Buttons/iconsButtons";
 import Navbar from "../../Components/Navbar/Navbar";
+import HeroSection from "../../Components/HeroSection/Hero";
 
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <HeroSection />
+
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
           <Button variant="secondary" label="Login" />
