@@ -13,6 +13,7 @@ export default function MainLayout() {
           <SidebarSection key={index} section={section} />
         ))}
       </aside>
+
       <main>
         <Outlet />
       </main>

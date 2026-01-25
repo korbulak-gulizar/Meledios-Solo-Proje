@@ -1,0 +1,146 @@
+@use "../../styles/mixins" as *;
+@use "/src/styles/variables" as *;
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+  background-color: rgba(50, 50, 50, 0.6);
+  color: white;
+  backdrop-filter: blur(6px);
+}
+
+.left {
+  flex: 0 0 auto; // sabit genişlik
+  display: flex;
+  align-items: center;
+}
+
+.searchWrapper {
+  position: relative;
+}
+
+.searchWrapper svg {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  color: #aaa;
+}
+
+.search {
+  width: 339px; // sabit genişlik
+  height: 38px; // sabit yükseklik
+  padding-left: 36px; // ikon için boşluk
+  border-radius: 20px;
+  border: none;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.center {
+  flex: 1; // ortadaki menü genişliği
+  display: flex;
+  justify-content: center;
+  gap: 120px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    a {
+      font-size: clamp(12px, 2vw, 16px);
+    }
+
+    font-weight: 500;
+    font-family: $font-primary;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+.right {
+  flex: 0 0 auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+/* Başlık varsayılan olarak gizli */
+.homeTitle {
+  display: none;
+}
+
+/* Geniş ekran (desktop) */
+@media (min-width: 992px) {
+  .homePage {
+    display: none; // geniş ekranda gizlenir
+  }
+}
+
+/* Tablet */
+@media (max-width: 992px) {
+  .center {
+    gap: 10px;
+  }
+  .search {
+    display: none;
+  }
+  .right {
+    display: none;
+  }
+  .homePage {
+    display: none; // geniş ekranda gizlenir
+  }
+}
+
+/* Mobil */
+@media (max-width: 600px) {
+  .center {
+    display: none; // menü gizlenir
+  }
+  .homeTitle {
+    display: flex;
+    font-size: clamp(14px, 4vw, 18px);
+  }
+  .homePage {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+  }
+  .homeTitle {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    font-size: 30px;
+    gap: 10px;
+  }
+  .home {
+    color: #0e9eef;
+  }
+  .page {
+    color: #ee10b0;
+  }
+  .homePage svg:last-child {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+  .homePage svg:first-child {
+    cursor: pointer;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

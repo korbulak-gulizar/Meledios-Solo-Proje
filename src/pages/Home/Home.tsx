@@ -3,11 +3,13 @@ import {
   FacebookIcon,
   GoogleIcon,
 } from "../../Components/Buttons/iconsButtons";
+import Navbar from "../../Components/Navbar/Navbar";
+
 const Home = () => {
   return (
     <div>
-      <h1>Welcome to the Home Page</h1>
-      <header>
+      <Navbar />
+      {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
           <Button variant="secondary" label="Login" />
           <Button variant="primary" label="Sign Up" />
@@ -21,7 +23,7 @@ const Home = () => {
             label="FAcebook Login"
           />
         </div>
-      </header>
+      </header>*/}
     </div>
   );
 };
