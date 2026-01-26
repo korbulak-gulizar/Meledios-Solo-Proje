@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+.card {
+  background-color: #1f1f1f;
+  border-radius: 10px;
+  max-width: 174px;
+  height: 214px;
+
+  padding: 4px 15px 4px 15px;
+  text-align: center;
+
+  img {
+    max-width: 144px;
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: -10px;
+    color: #ffffff;
+    font-family: $font-primary;
+    text-align: left;
+  }
+
+  p {
+    font-size: 12px;
+    color: white;
+    margin: 0;
+    font-family: $font-primary;
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+  }
+}

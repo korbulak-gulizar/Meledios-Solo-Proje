@@ -4,11 +4,13 @@ import {
   GoogleIcon,
 } from "../../Components/Buttons/iconsButtons";
 import Navbar from "../../Components/Navbar/Navbar";
-
+import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <SongCardList />
+
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
           <Button variant="secondary" label="Login" />
