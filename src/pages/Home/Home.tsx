@@ -5,10 +5,13 @@ import {
 } from "../../Components/Buttons/iconsButtons";
 import Navbar from "../../Components/Navbar/Navbar";
 import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
+import HeroSection from "../../Components/HeroSection/Hero";
+
 const Home = () => {
   return (
     <div>
       <Navbar />
+      <HeroSection />
       <SongCardList />
 
       {/*<header>
