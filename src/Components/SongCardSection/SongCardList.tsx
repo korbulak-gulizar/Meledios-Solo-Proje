@@ -9,7 +9,7 @@ const CardList: React.FC = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
-        <h1>
+        <h1 className={styles.titleWeekly}>
           Weekly Top <span>Songs</span>
         </h1>
       </div>

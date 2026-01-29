@@ -1,7 +1,7 @@
 export const ViewAll = () => (
   <svg
-    width="62"
-    height="91"
+    width="75"
+    height="105"
     viewBox="0 0 62 91"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"

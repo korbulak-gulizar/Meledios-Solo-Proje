@@ -4,24 +4,27 @@
   width: 100%;
 }
 
-h1 {
+.titleWeekly {
   font-size: 1.8rem;
   font-weight: 700;
   color: white;
-  margin-top: 20px;
+  margin-top: 30px;
+  margin-left: 20px;
 }
-h1 span {
+.titleWeekly span {
   color: #ee10b0;
 }
 
 /* Kartların olduğu grid */
 .cardList {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 176px);
-  gap: 50px;
-  margin-top: 20px;
+  //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(5, 230px) 70px;
 
-  justify-content: center; /* grid’i ortalar */
-  justify-items: end; /* her kartı kendi hücresinde sola yaslar */
+  gap: 50px;
+  margin-top: 30px;
+  margin-left: 20px;
+
+  justify-items: center;
   align-items: center;
 }
