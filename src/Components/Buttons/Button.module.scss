@@ -12,6 +12,8 @@
     min-width: 160px;
     min-height: 36px;
   }
+  
+
 }
 
 .primary {
@@ -208,5 +210,12 @@
     );
     transform: translateY(-2px);
     box-shadow: 0 4px 8px #0e9eef;
+  }
+}
+
+  @media (max-width: 1440px) {
+  .btn {
+  max-width: 100px ;
+  min-width: 80px ;
   }
 }
