@@ -4,6 +4,7 @@ import {
   GoogleIcon,
 } from "../../Components/Buttons/iconsButtons";
 import Navbar from "../../Components/Navbar/Navbar";
+import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
 import HeroSection from "../../Components/HeroSection/Hero";
 
 const Home = () => {
@@ -11,6 +12,7 @@ const Home = () => {
     <div>
       <Navbar />
       <HeroSection />
+      <SongCardList />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
