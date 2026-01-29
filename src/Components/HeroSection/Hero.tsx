@@ -5,7 +5,8 @@ import Button from "../../Components/Buttons/Button";
 const HeroSection: React.FC = () => {
   return (
     <section className={styles.hero}>
-      <div className={styles.overlay}>
+      <div className={styles.overlay}></div>
+      <div className={styles.content}>
         <h1 className={styles.title}>
           All the <span>Best Songs</span> <br></br>in One Place
         </h1>

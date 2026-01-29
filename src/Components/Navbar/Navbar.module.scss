@@ -7,21 +7,18 @@
   align-items: center;
   height: 58px;
   padding: 6px 8px;
-  background-color: transparent; // yarı saydam zemin
+  background-color: transparent;
   color: white;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
+  width: calc(100% - 68px);
+  background-color: transparent;
+  box-sizing: border-box;
+  border-radius: 25px;
+  position: absolute;
+  z-index: 2;
 }
-.navbar {
-  position: sticky; // ekranın üstüne sabitler
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; // HeroSection’un üstünde kalması için
-}
-
 .left {
-  flex: 0 0 auto; // sabit genişlik
   display: flex;
   align-items: center;
 }
@@ -40,20 +37,20 @@
 }
 
 .search {
-  width: 339px; // sabit genişlik
-  height: 38px; // sabit yükseklik
-  padding-left: 36px; // ikon için boşluk
-  border-radius: 20px;
+  width: 339px; 
+  height: 38px; 
+  padding-left: 36px; 
+  border-radius: 10px;
   border: none;
-  background-color: #1a1a1a;
+  background-color: #1f1f1f;
   color: white;
 }
 
 .center {
-  flex: 1; // ortadaki menü genişliği
+  flex: 1; 
   display: flex;
-  justify-content: center;
-  gap: 120px;
+  justify-content: space-around;
+
 
   a {
     color: white;
@@ -72,7 +69,6 @@
 }
 
 .right {
-  flex: 0 0 auto;
   display: flex;
   justify-content: flex-end;
   gap: 12px;
@@ -138,7 +134,9 @@
   }
   .homePage svg:last-child {
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
       transform: scale(1.1);
@@ -146,7 +144,9 @@
   }
   .homePage svg:first-child {
     cursor: pointer;
-    transition: transform 0.2s ease, color 0.2s ease;
+    transition:
+      transform 0.2s ease,
+      color 0.2s ease;
 
     &:hover {
       transform: scale(1.1);
