@@ -37,9 +37,9 @@
 }
 
 .search {
-  width: 339px; 
-  height: 38px; 
-  padding-left: 36px; 
+  width: 339px;
+  height: 38px;
+  padding-left: 36px;
   border-radius: 10px;
   border: none;
   background-color: #1f1f1f;
@@ -47,10 +47,9 @@
 }
 
 .center {
-  flex: 1; 
+  flex: 1;
   display: flex;
   justify-content: space-around;
-
 
   a {
     color: white;
@@ -89,7 +88,7 @@
 /* Tablet */
 @media (max-width: 992px) {
   .center {
-    gap: 10px;
+    display: none; // menü gizlenir
   }
   .search {
     display: none;
@@ -103,24 +102,27 @@
 }
 
 /* Mobil */
-@media (max-width: 600px) {
-  .center {
-    display: none; // menü gizlenir
+@media (max-width: 768px) {
+  .navbar {
+    background-color: #181818;
+    z-index: none;
   }
-  .homeTitle {
-    display: flex;
-    font-size: clamp(14px, 4vw, 18px);
-  }
+
   .homePage {
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     position: relative;
+    padding: 0 0px;
+    max-width: 383px;
     width: 100%;
+    margin-bottom: 90px;
   }
   .homeTitle {
     position: absolute;
     left: 50%;
+
     transform: translateX(-50%);
     display: flex;
     font-size: 30px;
@@ -128,15 +130,15 @@
   }
   .home {
     color: #0e9eef;
+    font-size: clamp(14px, 4vw, 24px);
   }
   .page {
     color: #ee10b0;
+    font-size: clamp(14px, 4vw, 24px);
   }
   .homePage svg:last-child {
     cursor: pointer;
-    transition:
-      transform 0.2s ease,
-      color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 
     &:hover {
       transform: scale(1.1);
@@ -144,9 +146,7 @@
   }
   .homePage svg:first-child {
     cursor: pointer;
-    transition:
-      transform 0.2s ease,
-      color 0.2s ease;
+    transition: transform 0.2s ease, color 0.2s ease;
 
     &:hover {
       transform: scale(1.1);
