@@ -6,6 +6,7 @@ import {
 import Navbar from "../../Components/Navbar/Navbar";
 import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
 import HeroSection from "../../Components/HeroSection/Hero";
+import NewReleaseList from "../../Components/NewReleaseSection/NewReleaseList";
 
 const Home = () => {
   return (
@@ -13,6 +14,7 @@ const Home = () => {
       <Navbar />
       <HeroSection />
       <SongCardList />
+      <NewReleaseList />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
