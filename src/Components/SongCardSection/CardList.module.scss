@@ -1,5 +1,5 @@
-@import "../../styles/variables.scss";
-@import "../SongCardSection/SongCards.module.scss";
+@use "../../styles/variables.scss";
+@use "../SongCardSection/SongCards.module.scss";
 .wrapper {
   width: 100%;
 }
@@ -19,7 +19,7 @@
 .cardList {
   display: grid;
   //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  grid-template-columns: repeat(5, 230px) 70px;
+  grid-template-columns: repeat(6, 1fr);
 
   gap: 50px;
   margin-top: 30px;
@@ -27,4 +27,23 @@
 
   justify-items: center;
   align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .cardList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .cardList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .cardList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
 }

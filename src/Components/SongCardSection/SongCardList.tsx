@@ -1,9 +1,9 @@
 import React from "react";
-import type { SongCardProps } from "./SongCards";
-import SongCards from "./SongCards";
+import type { VerticalCardProps } from "../Cards/VerticalCard";
+import VerticalCards from "../Cards/VerticalCard";
 import { cards } from "./songCardsData";
 import styles from "./CardList.module.scss";
-import { ViewAll } from "./WievAllicon";
+import { ViewAll } from "../WievAllIcon/WievAllicon";
 
 const CardList: React.FC = () => {
   return (
@@ -15,8 +15,8 @@ const CardList: React.FC = () => {
       </div>
 
       <div className={styles.cardList}>
-        {cards.map((card: SongCardProps, index: number) => (
-          <SongCards key={index} {...card} />
+        {cards.map((card: VerticalCardProps, index: number) => (
+          <VerticalCards key={index} {...card} />
         ))}
         <ViewAll />
       </div>

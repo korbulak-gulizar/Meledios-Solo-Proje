@@ -1,13 +1,13 @@
-import React, { use } from "react";
-import styles from "./SongCards.module.scss";
+import styles from "./style.module.scss";
+import React from "react";
 
-export type SongCardProps = {
+export type VerticalCardProps = {
   title: string;
   description: string;
   imageUrl?: string;
 };
 
-const SongCards: React.FC<SongCardProps> = ({
+const VerticalCards: React.FC<VerticalCardProps> = ({
   title,
   description,
   imageUrl,
@@ -20,4 +20,4 @@ const SongCards: React.FC<SongCardProps> = ({
     </div>
   );
 };
-export default SongCards;
+export default VerticalCards;

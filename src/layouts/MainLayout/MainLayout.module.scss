@@ -7,6 +7,9 @@
   gap: 40px;
   background-color: $sidebar-color;
 
+  /* ---------------------- */
+  /*   SIDEBAR (DESKTOP)    */
+  /* ---------------------- */
   .sidebar {
     width: 270px;
     height: 100vh;
@@ -15,8 +18,8 @@
     border-right: 2px solid $button-color;
     box-shadow: 8px 0px 24.2px rgba(238, 16, 176, 0.15);
     font-family: $font-primary;
+
     h1 {
-      font-size: $h1-size;
       font-size: clamp(24px, 2vw, 32px);
       font-weight: $h1-weight;
       line-height: 1.2;
@@ -27,36 +30,48 @@
     }
   }
 
+  /* ---------------------- */
+  /*        MAIN AREA       */
+  /* ---------------------- */
   main {
     flex: 1;
     width: 100%;
     background-color: $sidebar-color;
     padding-top: 48px;
     padding-right: 64px;
-
     margin-left: 40px;
-    @media (max-width: 768px) {
-      margin-left: 0; // küçük ekranda kaldır
-    }
-
     position: relative;
     overflow: hidden;
   }
-}
 
-/* 🔹 Responsive ayar */
-@media (max-width: 768px) {
-  //.mainlayout {
-  //flex-direction: column;
-  //gap: 0;
-  .sidebar {
-    width: 180px;
-    padding: 32px 16px 32px 32px;
+  /* ----------------------------------------- */
+  /*   1200px ALTINDA SIDEBAR DARALMAYA BAŞLASIN */
+  /* ----------------------------------------- */
+  @media (max-width: 1200px) {
+    .sidebar {
+      width: 200px;
+      padding: 48px 24px;
+    }
+
+    main {
+      margin-left: 0;
+    }
   }
 
-  main {
-    margin-left: 0 !important;
-    padding-right: 14px;
-    width: 100%;
+  /* ----------------------------------------- */
+  /*   768px ALTINDA DAHA DA DAR VE MOBILE LAYOUT */
+  /* ----------------------------------------- */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 160px;
+      padding: 32px 26px;
+      margin-top: 30px;
+    }
+
+    main {
+      margin-left: auto;
+      padding-right: 12px;
+      width: 100%;
+    }
   }
 }
