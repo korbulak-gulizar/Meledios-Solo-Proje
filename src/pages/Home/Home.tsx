@@ -1,12 +1,13 @@
-import Button from "../../Components/Buttons/Button";
-import {
-  FacebookIcon,
-  GoogleIcon,
-} from "../../Components/Buttons/iconsButtons";
+//import Button from "../../Components/Buttons/Button";
+//import {
+//FacebookIcon,
+//GoogleIcon,
+//} from "../../Components/Buttons/iconsButtons";
 import Navbar from "../../Components/Navbar/Navbar";
 import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
 import HeroSection from "../../Components/HeroSection/Hero";
 import NewReleaseList from "../../Components/NewReleaseSection/NewReleaseList";
+import PopularArtistList from "../../Components/PopularArtist/PopularList";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
       <HeroSection />
       <SongCardList />
       <NewReleaseList />
+      <PopularArtistList />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
