@@ -8,6 +8,7 @@ import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
 import HeroSection from "../../Components/HeroSection/Hero";
 import NewReleaseList from "../../Components/NewReleaseSection/NewReleaseList";
 import PopularArtistList from "../../Components/PopularArtist/PopularList";
+import MusicVideoList from "../../Components/MusicVideoSection/MusicVideoList";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <SongCardList />
       <NewReleaseList />
       <PopularArtistList />
+      <MusicVideoList />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
