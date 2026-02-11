@@ -9,6 +9,7 @@ import HeroSection from "../../Components/HeroSection/Hero";
 import NewReleaseList from "../../Components/NewReleaseSection/NewReleaseList";
 import PopularArtistList from "../../Components/PopularArtist/PopularList";
 import MusicVideoList from "../../Components/MusicVideoSection/MusicVideoList";
+import TopAlbumsList from "../../Components/TopAlbumsSection/TopAlbumsList";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <NewReleaseList />
       <PopularArtistList />
       <MusicVideoList />
+      <TopAlbumsList />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
