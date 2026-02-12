@@ -1,0 +1,49 @@
+@use "../../styles/variables.scss";
+@use "../Cards/HeaderCardStyle.module.scss";
+.wrapper {
+  width: 100%;
+}
+
+.titleMoodPlaylist {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+.titleMoodPlaylist span {
+  color: #ee10b0;
+}
+
+/* Kartların olduğu grid */
+.cardList {
+  display: grid;
+  //grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(6, 1fr);
+
+  gap: 50px;
+  margin-top: 30px;
+  margin-left: 20px;
+
+  justify-items: center;
+  align-items: center;
+}
+
+@media (max-width: 1200px) {
+  .cardList {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .cardList {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+@media (max-width: 500px) {
+  .cardList {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

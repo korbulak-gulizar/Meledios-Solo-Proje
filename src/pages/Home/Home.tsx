@@ -10,6 +10,7 @@ import NewReleaseList from "../../Components/NewReleaseSection/NewReleaseList";
 import PopularArtistList from "../../Components/PopularArtist/PopularList";
 import MusicVideoList from "../../Components/MusicVideoSection/MusicVideoList";
 import TopAlbumsList from "../../Components/TopAlbumsSection/TopAlbumsList";
+import ImageHeaderList from "../../Components/MoodPlaylistSection/ImageHeaderList";
 
 const Home = () => {
   return (
@@ -21,6 +22,7 @@ const Home = () => {
       <PopularArtistList />
       <MusicVideoList />
       <TopAlbumsList />
+      <ImageHeaderList />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
