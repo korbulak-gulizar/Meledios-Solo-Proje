@@ -1,0 +1,132 @@
+@import "../../styles/variables.scss";
+.card {
+  display: grid;
+  grid-template-columns: 40px 60px 0.7fr 0.5fr 1.5fr 0.5fr;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0;
+  border-bottom: 1px solid #2a2a2a;
+  color: #fff;
+  font-family: $font-primary;
+  background-color: #1e1e1e;
+  border-radius: 5px;
+
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Rank */
+.rank {
+  font-size: 24px;
+  font-weight: 600;
+
+  font-family: $font-primary;
+}
+
+/* Cover */
+.cover {
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+/* Title + Artist (alt alta) */
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: $font-weight-medium;
+  font-family: $font-primary;
+}
+
+.artist {
+  font-size: 12px;
+
+  font-family: $font-primary;
+}
+
+/* Date */
+.date {
+  font-size: 16px;
+
+  font-family: $font-primary;
+  font-weight: $font-weight-medium;
+}
+
+/* Album (tek satır) */
+.album {
+  font-size: 16px;
+  text-align: center;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-family: $font-primary;
+}
+
+/* Herz + Duration yan yana */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.herz {
+  width: 25px;
+  height: 25px;
+}
+
+.duration {
+  font-size: 16px;
+
+  font-family: $font-primary;
+}
+.card {
+  transition: background-color 0.25s ease, transform 0.25s ease,
+    box-shadow 0.25s ease, border 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+  border: 1px solid #444;
+}
+
+/* Cover zoom */
+.cover {
+  transition: transform 0.3s ease;
+}
+.card:hover .cover {
+  transform: scale(1.05);
+}
+
+/* Title highlight */
+.card:hover .title {
+  color: #ee10b0;
+}
+
+/* Herz pop */
+.card:hover .herz {
+  filter: brightness(1.4);
+  transform: scale(1.1);
+  transition: 0.2s ease;
+}
+
+/* Duration highlight */
+.card:hover .duration {
+  color: #ee10b0;
+}
+
+/* Rank slight scale */
+.card:hover .rank {
+  transform: scale(1.05);
+  transition: 0.2s ease;
+}
