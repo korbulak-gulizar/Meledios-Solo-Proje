@@ -11,6 +11,7 @@ import PopularArtistList from "../../Components/PopularArtist/PopularList";
 import MusicVideoList from "../../Components/MusicVideoSection/MusicVideoList";
 import TopAlbumsList from "../../Components/TopAlbumsSection/TopAlbumsList";
 import ImageHeaderList from "../../Components/MoodPlaylistSection/ImageHeaderList";
+import TrendingSongList from "../../Components/TrendingSongsSection/TrendingSongList.tsx";
 
 const Home = () => {
   return (
@@ -19,8 +20,10 @@ const Home = () => {
       <HeroSection />
       <SongCardList />
       <NewReleaseList />
+      <TrendingSongList />
       <PopularArtistList />
       <MusicVideoList />
+
       <TopAlbumsList />
       <ImageHeaderList />
 

@@ -1,0 +1,42 @@
+@import "../../styles/variables.scss";
+.titleWeekly {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: white;
+  margin-top: 40px;
+  margin-left: 20px;
+}
+
+.titleWeekly span {
+  color: #ee10b0;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px 0;
+  width: 100%;
+}
+
+/* LIST HEADER — kartla aynı grid */
+.listHeader {
+  display: grid;
+  grid-template-columns: 40px 60px 1.3fr 2.2fr 1.6fr 0.8fr;
+  padding: 12px 0;
+  color: white;
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 400;
+
+  margin-top: 10px;
+}
+.listHeader div {
+  transition: color 0.2s ease, transform 0.2s ease;
+  cursor: pointer;
+}
+
+.listHeader div:hover {
+  color: #ee10b0;
+  transform: translateY(-2px);
+}
