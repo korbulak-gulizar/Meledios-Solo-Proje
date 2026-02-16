@@ -29,6 +29,14 @@
       -webkit-text-fill-color: transparent;
     }
   }
+  .contentArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-right: 64px; /* main ile aynı hizalama */
+    padding-left: 40px; /* main margin-left buraya taşındı */
+    padding-top: 48px;
+  }
 
   /* ---------------------- */
   /*        MAIN AREA       */
@@ -38,8 +46,8 @@
     width: 100%;
     background-color: $sidebar-color;
     padding-top: 48px;
-    padding-right: 64px;
-    margin-left: 40px;
+    //padding-right: 64px;
+    //margin-left: 40px;
     position: relative;
     overflow: hidden;
   }
