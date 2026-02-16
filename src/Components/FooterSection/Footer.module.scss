@@ -1,0 +1,82 @@
+@use "../../styles/variables" as *;
+.footer {
+  width: 100%;
+  background: #181818;
+  padding: 80px 20px;
+  //display: flex;
+  //justify-content: space-between;
+  //align-items: flex-start;
+  gap: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.footer-columns {
+  display: flex;
+  justify-content: space-between;
+  //flex-direction: row;
+  gap: 60px;
+}
+
+.brand {
+  font-size: 28px;
+  font-family: $font-primary;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 20px;
+}
+
+.description {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.6;
+  font-family: $font-primary;
+
+  span.purple {
+    color: #ee10b0;
+  }
+  span.blue {
+    color: #0e9eef;
+  }
+}
+
+.social-icons {
+  display: flex;
+  flex-direction: column; /* Melodies üstte, ikonlar altta */
+  gap: 40px; /* Melodies ile ikonlar arası boşluk */
+}
+.melodies {
+  font-size: 40px;
+  font-weight: 600;
+  color: #fff;
+  text-align: center;
+  margin-top: 40px;
+
+  font-weight: 800;
+  line-height: 1.2;
+  font-family: $font-primary;
+  background: linear-gradient(
+    90.07deg,
+    #ee10b0 -4.82%,
+    rgba(14, 158, 239, 0.92) 127.01%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.iconsRow {
+  display: flex;
+  align-items: center;
+  font-family: $font-primary;
+
+  justify-content: center;
+  gap: 12px; /* ikonlar arası boşluk */
+  svg {
+    transition: transform 0.2s ease, fill 0.2s ease, color 0.2s ease;
+    cursor: pointer;
+  }
+  svg:hover {
+    transform: scale(1.15);
+    color: #ee10b0;
+    fill: #ee10b0;
+  }
+}
