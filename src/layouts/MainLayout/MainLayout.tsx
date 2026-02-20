@@ -18,8 +18,8 @@ export default function MainLayout() {
         <div className={styles.contentArea}>
           <main>
             <Outlet />
+            <Footer />
           </main>
-          <Footer />
         </div>
       </div>
     </>

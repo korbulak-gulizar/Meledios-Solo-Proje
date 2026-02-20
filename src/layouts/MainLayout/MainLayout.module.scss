@@ -18,6 +18,9 @@
     border-right: 2px solid $button-color;
     box-shadow: 8px 0px 24.2px rgba(238, 16, 176, 0.15);
     font-family: $font-primary;
+    position: sticky;
+    top: 0;
+    left: 0;
 
     h1 {
       font-size: clamp(24px, 2vw, 32px);
@@ -45,9 +48,10 @@
     flex: 1;
     width: 100%;
     background-color: $sidebar-color;
-    padding-top: 48px;
+    padding-top: 5px;
     //padding-right: 64px;
     //margin-left: 40px;
+
     position: relative;
     overflow: hidden;
   }
