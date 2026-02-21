@@ -1,0 +1,138 @@
+@use "../../styles/variables.scss" as *;
+.formBox {
+  background-color: #53063e;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 100%;
+  color: white;
+  margin-left: 70px;
+}
+
+/* ------------------------------
+   HEADER: Sign Up & Login Buttons
+--------------------------------*/
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-bottom: 1.5rem;
+
+  button {
+    display: inline-flex; // BUTONLARIN GENİŞLEMESİNİ ENGELLER
+    background: transparent;
+    border: none;
+    color: #ff7bff;
+    cursor: pointer;
+    font-size: 20px;
+    font-family: $font-primary;
+    position: relative;
+    transition: transform 0.2s ease, color 0.2s ease;
+
+    &:hover {
+      transform: scale(1.08);
+      color: white;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -3px;
+      width: 0%;
+      height: 2px;
+      background: white;
+      transition: width 0.25s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+  }
+
+  // HEADER içindeki butonlar genişlemesin
+  .signupBtnH,
+  .loginBtn {
+    width: auto;
+    font-family: $font-primary;
+  }
+}
+
+/* ------------------------------ */
+.inputs {
+  display: flex;
+  //flex-direction: row;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+}
+
+/* ------------------------------ */
+.signupBtn {
+  width: 100%;
+  padding: 0.8rem;
+  color: white;
+  cursor: pointer;
+  background: #ee10b0;
+  border: none;
+  font-size: 20px;
+  font-family: $font-primary;
+  border-radius: 6px;
+  font-weight: 500;
+  //margin-top: 1rem;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}
+
+/* ------------------------------ */
+.or {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; // çizgi ile yazı arası boşluk
+  color: white;
+  font-family: $font-primary;
+  font-weight: 500;
+
+  margin: 1rem 0;
+
+  &::before,
+  &::after {
+    content: "";
+    flex: 1; // çizgiler eşit uzunlukta
+    height: 1px;
+    //background: rgba(255, 255, 255, 0.4);
+    background: white;
+  }
+}
+
+/* ------------------------------ */
+.googleBtn {
+  width: 100%;
+  padding: 0.8rem;
+  background: white;
+  color: black;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex; // ikon + yazı yan yana
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem; // ikon ile yazı arası boşluk
+  transition: transform 0.2s ease;
+  font-size: 20px;
+  font-family: $font-primary;
+  font-weight: 500;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+  }
+}

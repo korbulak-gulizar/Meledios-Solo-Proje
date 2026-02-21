@@ -1,0 +1,30 @@
+@use "../../styles/variables.scss" as *;
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+
+  label {
+    color: white;
+    margin-bottom: 0.3rem;
+    font-size: 16px;
+    font-family: $font-primary;
+    font-weight: 500;
+  }
+
+  input {
+    padding: 0.8rem;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #53063e;
+    color: white;
+    border: 1px solid white;
+    font-family: $font-primary;
+
+    &::placeholder {
+      color: #bdbdbd;
+    }
+  }
+}
