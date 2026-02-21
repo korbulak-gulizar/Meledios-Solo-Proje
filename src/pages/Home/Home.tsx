@@ -12,7 +12,7 @@ import MusicVideoList from "../../Components/MusicVideoSection/MusicVideoList";
 import TopAlbumsList from "../../Components/TopAlbumsSection/TopAlbumsList";
 import ImageHeaderList from "../../Components/MoodPlaylistSection/ImageHeaderList";
 import TrendingSongList from "../../Components/TrendingSongsSection/TrendingSongList.tsx";
-
+import SignupPage from "../SignupPage/SignupPage.tsx";
 const Home = () => {
   return (
     <div>
@@ -26,6 +26,7 @@ const Home = () => {
 
       <TopAlbumsList />
       <ImageHeaderList />
+      <SignupPage />
 
       {/*<header>
         <div style={{ display: "flex", gap: "20px" }}>
