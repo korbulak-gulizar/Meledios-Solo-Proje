@@ -6,14 +6,16 @@ type ButtonProbs = {
   label?: string;
   icon?: React.ReactNode;
   className?: string;
+  onClick?: () => void; // 🔥 EKLENDİ
 };
 
-const Button = ({ variant, label, icon, className }: ButtonProbs) => {
+const Button = ({ variant, label, icon, className, onClick }: ButtonProbs) => {
   return (
     <button
-      className={`${styles.btn} ${styles[variant || "primary"]}${
+      className={`${styles.btn} ${styles[variant || "primary"]} ${
         className || ""
       }`}
+      onClick={onClick} // 🔥 EKLENDİ
     >
       {icon && <span className={styles.icon}>{icon}</span>}
       {label}

@@ -1,8 +1,3 @@
-//import Button from "../../Components/Buttons/Button";
-//import {
-//FacebookIcon,
-//GoogleIcon,
-//} from "../../Components/Buttons/iconsButtons";
 import Navbar from "../../Components/Navbar/Navbar";
 import SongCardList from "../../Components/SongCardSection/SongCardList.tsx";
 import HeroSection from "../../Components/HeroSection/Hero";
@@ -13,36 +8,35 @@ import TopAlbumsList from "../../Components/TopAlbumsSection/TopAlbumsList";
 import ImageHeaderList from "../../Components/MoodPlaylistSection/ImageHeaderList";
 import TrendingSongList from "../../Components/TrendingSongsSection/TrendingSongList.tsx";
 import SignupPage from "../SignupPage/SignupPage.tsx";
+
+import { useLoading } from "../../Context/LoadingContext.tsx"; // 🔥 loading eklendi
+
 const Home = () => {
+  const { showLoading, hideLoading } = useLoading(); // 🔥 loading fonksiyonları
+
+  const handleClick = () => {
+    showLoading();
+    setTimeout(() => hideLoading(), 2000);
+  };
+
   return (
     <div>
       <Navbar />
+
+      {/* Örnek: HeroSection üstüne bir test butonu koyduk */}
+      <button onClick={handleClick} style={{ margin: "20px" }}>
+        Loading Test
+      </button>
+
       <HeroSection />
       <SongCardList />
       <NewReleaseList />
       <TrendingSongList />
       <PopularArtistList />
       <MusicVideoList />
-
       <TopAlbumsList />
       <ImageHeaderList />
       <SignupPage />
-
-      {/*<header>
-        <div style={{ display: "flex", gap: "20px" }}>
-          <Button variant="secondary" label="Login" />
-          <Button variant="primary" label="Sign Up" />
-          <Button variant="createPlayList" label="Create Playlist" />
-          <Button variant="discoverNow" label="Discover Now" />
-
-          <Button variant="google" icon={<GoogleIcon />} label="Google Login" />
-          <Button
-            variant="facebook"
-            icon={<FacebookIcon />}
-            label="FAcebook Login"
-          />
-        </div>
-      </header>*/}
     </div>
   );
 };
