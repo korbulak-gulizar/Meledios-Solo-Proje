@@ -31,6 +31,11 @@ const SignupForm = () => {
       </div>
 
       <InputField label="E-Mail" placeholder="Enter Your E-Mail" type="email" />
+      <InputField
+        label="Password"
+        placeholder="Enter Your Password"
+        type="password"
+      />
 
       <button className={styles.signupBtn} onClick={handleClick}>
         Sign Up
