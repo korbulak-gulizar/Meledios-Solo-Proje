@@ -1,0 +1,71 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+/* Üst satır: uhr solda, note sağda */
+.topRow {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; // biri sol, biri sağ
+  align-items: center;
+  padding: 30px 40px; // üst boşluk
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.uhr {
+  width: 90px;
+  height: auto;
+}
+
+.note {
+  width: 90px;
+  height: auto;
+}
+
+/* Circle tam ortada */
+.centerCircle {
+  position: absolute;
+  top: 50%; // tam ortada
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.circle {
+  width: 250px;
+  height: auto;
+}
+
+/* Loading yazısı altta */
+.loadingRow {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

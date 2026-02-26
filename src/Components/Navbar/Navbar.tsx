@@ -3,7 +3,19 @@ import styles from "../Navbar/Navbar.module.scss";
 import Button from "../../Components/Buttons/Button";
 import { LupeIcon, HamburgerMenu, RightLupe } from "../Navbar/NavbarIcon";
 
+// 🔥 Loading import
+import { useLoading } from "../../Context/LoadingContext";
+
 const Navbar: React.FC = () => {
+  // 🔥 Loading fonksiyonları
+  const { showLoading, hideLoading } = useLoading();
+
+  // 🔥 Tüm butonlarda kullanacağın fonksiyon
+  const handleClick = () => {
+    showLoading();
+    setTimeout(() => hideLoading(), 2000);
+  };
+
   return (
     <header className={styles.navbar}>
       <div className={styles.left}>
@@ -23,7 +35,6 @@ const Navbar: React.FC = () => {
         <a href="/premium">Premium</a>
       </nav>
 
-      {/* Home Page Basligi */}
       <div className={styles.homePage}>
         <RightLupe />
         <h1 className={styles.homeTitle}>
@@ -34,8 +45,9 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className={styles.right}>
-        <Button variant="secondary" label="Login" />
-        <Button variant="primary" label="Sign Up" />
+        {/* 🔥 Loading tetikleyen butonlar */}
+        <Button variant="secondary" label="Login" onClick={handleClick} />
+        <Button variant="primary" label="Sign Up" onClick={handleClick} />
       </div>
     </header>
   );

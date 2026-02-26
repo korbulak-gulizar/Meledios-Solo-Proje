@@ -9,20 +9,34 @@ import AuthLayout from "./layouts/AuthLayout/AuthLayout.tsx";
 import MainLayout from "./layouts/MainLayout/MainLayout.tsx";
 import Home from "./pages/Home/Home.tsx";
 
-import App from "./App.tsx";
+import { LoadingProvider, useLoading } from "./Context/LoadingContext.tsx";
+import LoadingScreen from "./Components/LoadingScreen/LoadingScreen.tsx";
+
+const AppWrapper = () => {
+  const { loading } = useLoading();
+
+  return (
+    <>
+      {loading && <LoadingScreen />}
+
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<MainLayout />}>
+            <Route index element={<Home />} />
+          </Route>
+
+          <Route path="/auth" element={<AuthLayout />} />
+          <Route path="*" element={<div>404 Not Found</div>} />
+        </Routes>
+      </BrowserRouter>
+    </>
+  );
+};
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<MainLayout />}>
-          <Route index element={<Home />} />
-        </Route>
-
-        <Route path="/auth" element={<AuthLayout />} />
-        <Route path="*" element={<div>404 Not Found</div>} />
-      </Routes>
-    </BrowserRouter>
-    <App />
+    <LoadingProvider>
+      <AppWrapper />
+    </LoadingProvider>
   </StrictMode>
 );
