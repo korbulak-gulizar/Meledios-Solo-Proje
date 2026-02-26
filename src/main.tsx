@@ -18,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
         </Route>
+        <Route path="/login" element={<p>Login Page</p>} />
 
         <Route path="/auth" element={<AuthLayout />} />
         <Route path="*" element={<div>404 Not Found</div>} />

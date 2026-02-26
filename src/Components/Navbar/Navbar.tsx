@@ -34,7 +34,12 @@ const Navbar: React.FC = () => {
       </div>
 
       <div className={styles.right}>
-        <Button variant="secondary" label="Login" />
+        <Button
+          variant="secondary"
+          label="Login"
+          onClick={() => (window.location.href = "/login")}
+        />
+
         <Button variant="primary" label="Sign Up" />
       </div>
     </header>
