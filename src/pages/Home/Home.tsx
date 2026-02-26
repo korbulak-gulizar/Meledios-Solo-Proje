@@ -23,11 +23,6 @@ const Home = () => {
     <div>
       <Navbar />
 
-      {/* Örnek: HeroSection üstüne bir test butonu koyduk */}
-      <button onClick={handleClick} style={{ margin: "20px" }}>
-        Loading Test
-      </button>
-
       <HeroSection />
       <SongCardList />
       <NewReleaseList />
