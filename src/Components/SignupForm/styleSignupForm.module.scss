@@ -56,6 +56,12 @@
     width: auto;
     font-family: $font-primary;
   }
+    .active {
+      color: #EE10B0;
+      font-size: 24px;
+      border-bottom: 3px solid #EE10B0;
+      padding-bottom: 4px;
+    }
 }
 
 /* ------------------------------ */

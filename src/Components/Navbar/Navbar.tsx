@@ -2,8 +2,11 @@ import React from "react";
 import styles from "../Navbar/Navbar.module.scss";
 import Button from "../../Components/Buttons/Button";
 import { LupeIcon, HamburgerMenu, RightLupe } from "../Navbar/NavbarIcon";
+import { useNavigate } from "react-router";
 
 const Navbar: React.FC = () => {
+  const navigate = useNavigate();
+
   return (
     <header className={styles.navbar}>
       <div className={styles.left}>
@@ -37,10 +40,14 @@ const Navbar: React.FC = () => {
         <Button
           variant="secondary"
           label="Login"
-          onClick={() => (window.location.href = "/login")}
+          onClick={() => navigate("/login")}
         />
 
-        <Button variant="primary" label="Sign Up" />
+        <Button
+          variant="primary"
+          label="Sign Up"
+          onClick={() => navigate("/signup")}
+        />
       </div>
     </header>
   );

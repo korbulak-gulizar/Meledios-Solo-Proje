@@ -9,10 +9,10 @@ const SignupForm = () => {
   return (
     <div className={styles.formBox}>
       <div className={styles.header}>
-        <button className={styles.signupBtnH} onClick={() => setTab("signup")}>
+        <button className={`${styles.signupBtnH} ${tab === "signup" ? styles.active : ""}`} onClick={() => setTab("signup")}>
           Sign Up
         </button>
-        <button className={styles.loginBtn} onClick={() => setTab("login")}>
+        <button className={`${styles.loginBtn} ${tab === "login" ? styles.active : ""}`} onClick={() => setTab("login")}>
           Login
         </button>
       </div>
@@ -44,7 +44,15 @@ const SignupForm = () => {
           </button>
         </>
       ) : (
-        <button className={styles.signupBtn}>Login</button>
+        <>
+          <button className={styles.signupBtn}>Login</button>
+
+          <div className={styles.or}>Or</div>
+
+          <button className={styles.googleBtn}>
+            <img src={Google} alt="Google Icon" /> Login With Google
+          </button>
+        </>
       )}
     </div>
   );
