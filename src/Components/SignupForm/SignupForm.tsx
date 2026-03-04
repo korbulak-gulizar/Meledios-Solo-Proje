@@ -50,7 +50,7 @@ const SignupForm = () => {
           <div className={styles.or}>Or</div>
 
           <button className={styles.googleBtn}>
-            <img src={Google} alt="Google Icon" /> Sign Up With Google
+            <img src={Google} alt="Google Icon" /> Login With Google
           </button>
         </>
       )}
