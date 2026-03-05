@@ -13,6 +13,7 @@ import {
   SettingsIcon,
   LogoutIcon,
 } from "../SidebarSection/iconsSidebar/SidebarIcons";
+import { useNavigate } from "react-router-dom";
 
 const iconMap: Record<string, JSX.Element> = {
   home: <HomeIcon />,
@@ -32,6 +33,7 @@ interface SidebarItem {
   label: string;
   icon?: string;
   highlight?: string;
+  url?: string;
 }
 
 interface SidebarSectionProps {
@@ -42,7 +44,8 @@ interface SidebarSectionProps {
 }
 
 function SidebarSection({ section }: SidebarSectionProps) {
-  const [activeIndex, setActiveIndex] = useState<number | null>(null);
+  const navigate = useNavigate();
+
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -81,9 +84,9 @@ function SidebarSection({ section }: SidebarSectionProps) {
             <li
               key={index}
               className={`${item.highlight ? styles[item.highlight] : ""} ${
-                activeIndex === index ? styles.active : ""
+                window.location.pathname === item.url ? styles.active : ""
               }`}
-              onClick={() => setActiveIndex(index)}
+              onClick={() => navigate(item.url || "/")}
             >
               {item.icon && (
                 <span className={styles.icon}>{iconMap[item.icon]}</span>

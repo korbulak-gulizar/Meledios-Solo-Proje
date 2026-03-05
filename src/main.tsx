@@ -10,6 +10,7 @@ import MainLayout from "./layouts/MainLayout/MainLayout.tsx";
 import Home from "./pages/Home/Home.tsx";
 
 import App from "./App.tsx";
+import Discover from "./pages/Discover/Discover.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -17,6 +18,7 @@ createRoot(document.getElementById("root")!).render(
       <Routes>
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
+          <Route path="/discover" element={<Discover />} />
         </Route>
         <Route path="/login" element={<p>Login Page</p>} />
         <Route path="/signup" element={<p>Sign Up Page</p>} />

@@ -5,7 +5,11 @@ import { cards } from "./MusicVideoData";
 import styles from "./styleMusicVideo.module.scss";
 import { ViewAll } from "../WievAllIcon/WievAllicon";
 
-const CardList: React.FC = () => {
+type CardListProps = {
+  isDiscover?: boolean;
+};
+
+const CardList: React.FC<CardListProps> = ({ isDiscover }) => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -14,10 +18,21 @@ const CardList: React.FC = () => {
         </h1>
       </div>
 
-      <div className={styles.cardList}>
-        {cards.map((card: HorizontalCardProps, index: number) => (
-          <HorizontalCard key={index} {...card} />
-        ))}
+      <div className={styles.cardListContainer}>
+        <div className={styles.cardList}>
+          {isDiscover
+            ? cards.map((card: HorizontalCardProps, index: number) => (
+                <HorizontalCard key={index} {...card} />
+              ))
+            : cards
+                .slice(0, 3)
+                .map((card: HorizontalCardProps, index: number) => (
+                  <HorizontalCard key={index} {...card} />
+                ))}
+        </div>
+      </div>
+
+      <div className={styles.viewAllContainer}>
         <ViewAll />
       </div>
     </div>

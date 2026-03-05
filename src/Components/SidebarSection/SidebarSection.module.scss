@@ -54,7 +54,7 @@
 
       // Aktif öğe
       &.active {
-        background: rgba(255, 255, 255, 0.2);
+        background: $button-color;
         color: $button-color;
         font-weight: 600;
       }
@@ -65,6 +65,7 @@
         justify-content: flex-start;
         font-size: 1.4rem;
         transition: transform 0.2s ease;
+        color: white;
       }
 
       .label {

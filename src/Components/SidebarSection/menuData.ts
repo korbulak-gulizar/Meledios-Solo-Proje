@@ -4,6 +4,7 @@ export interface MenuItem {
   label: string;
   icon?: string;
   highlight?: string;
+  url?: string;
 }
 
 export interface MenuSection {
@@ -22,10 +23,10 @@ export const menuData: MenuData = {
     {
       title: "Menu",
       children: [
-        { label: "Home", icon: "home", highlight: "pink" },
-        { label: "Discover", icon: "discover" },
-        { label: "Albums", icon: "albums" },
-        { label: "Artists", icon: "artists" },
+        { label: "Home", icon: "home", highlight: "pink", url: "/" },
+        { label: "Discover", icon: "discover", url: "/discover" },
+        { label: "Albums", icon: "albums", url: "/albums" },
+        { label: "Artists", icon: "artists", url: "/artists" },
       ],
     },
     {
