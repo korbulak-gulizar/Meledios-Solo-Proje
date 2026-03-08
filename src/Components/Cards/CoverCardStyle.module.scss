@@ -1,0 +1,23 @@
+@import "../../styles/variables.scss";
+.card {
+  //background-color: #1f1f1f;
+  border-radius: 5px;
+  //
+  height: auto;
+  width: 100%;
+
+  padding-bottom: 10px;
+  text-align: center;
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    object-fit: cover;
+  }
+
+  &:hover {
+    transform: translateY(-6px);
+  }
+}
