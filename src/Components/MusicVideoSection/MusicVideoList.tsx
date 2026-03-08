@@ -23,7 +23,7 @@ const CardList: React.FC<CardListProps> = ({ isDiscover }) => {
       <div
         style={{
           display: "flex",
-          backgroundColor: "red",
+          //backgroundColor: "red",
           justifyContent: "space-between",
         }}
       >

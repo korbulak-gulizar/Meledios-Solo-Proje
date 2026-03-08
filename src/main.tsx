@@ -11,6 +11,8 @@ import Home from "./pages/Home/Home.tsx";
 
 import App from "./App.tsx";
 import Discover from "./pages/Discover/Discover.tsx";
+import Albums from "./pages/Albums/Albums.tsx";
+import Artists from "./pages/Artists/Artists.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -19,6 +21,8 @@ createRoot(document.getElementById("root")!).render(
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/discover" element={<Discover />} />
+          <Route path="/albums" element={<Albums />} />
+          <Route path="/artists" element={<Artists />} />
         </Route>
         <Route path="/login" element={<p>Login Page</p>} />
         <Route path="/signup" element={<p>Sign Up Page</p>} />
