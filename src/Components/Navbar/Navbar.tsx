@@ -4,11 +4,14 @@ import Button from "../../Components/Buttons/Button";
 import { LupeIcon, HamburgerMenu, RightLupe } from "../Navbar/NavbarIcon";
 import { useNavigate } from "react-router";
 
-const Navbar: React.FC = () => {
+const Navbar: React.FC<{ isSticky?: boolean }> = ({ isSticky = false }) => {
   const navigate = useNavigate();
 
   return (
-    <header className={styles.navbar}>
+    <header
+      className={styles.navbar}
+      style={{ position: isSticky ? "absolute" : "static" }}
+    >
       <div className={styles.left}>
         <div className={styles.searchWrapper}>
           <LupeIcon />

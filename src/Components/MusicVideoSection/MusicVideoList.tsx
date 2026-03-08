@@ -18,22 +18,26 @@ const CardList: React.FC<CardListProps> = ({ isDiscover }) => {
         </h1>
       </div>
 
-      <div className={styles.cardListContainer}>
-        <div className={styles.cardList}>
-          {isDiscover
-            ? cards.map((card: HorizontalCardProps, index: number) => (
-                <HorizontalCard key={index} {...card} />
-              ))
-            : cards
-                .slice(0, 3)
-                .map((card: HorizontalCardProps, index: number) => (
+      <div
+        style={{
+          display: "flex",
+          backgroundColor: "red",
+          justifyContent: "space-between",
+        }}
+      >
+        <div className={styles.cardListContainer}>
+          <div className={styles.cardList}>
+            {isDiscover
+              ? cards.map((card: HorizontalCardProps, index: number) => (
                   <HorizontalCard key={index} {...card} />
-                ))}
+                ))
+              : null}
+          </div>
         </div>
-      </div>
 
-      <div className={styles.viewAllContainer}>
-        <ViewAll />
+        <div className={styles.viewAllContainer}>
+          <ViewAll />
+        </div>
       </div>
     </div>
   );
