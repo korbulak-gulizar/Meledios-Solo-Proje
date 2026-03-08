@@ -10,6 +10,8 @@ type CardListProps = {
 };
 
 const CardList: React.FC<CardListProps> = ({ isDiscover }) => {
+  const visibleCards = isDiscover ? cards : cards.slice(0, 3);
+
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -27,11 +29,9 @@ const CardList: React.FC<CardListProps> = ({ isDiscover }) => {
       >
         <div className={styles.cardListContainer}>
           <div className={styles.cardList}>
-            {isDiscover
-              ? cards.map((card: HorizontalCardProps, index: number) => (
-                  <HorizontalCard key={index} {...card} />
-                ))
-              : null}
+            {visibleCards.map((card: HorizontalCardProps, index: number) => (
+              <HorizontalCard key={index} {...card} />
+            ))}
           </div>
         </div>
 
