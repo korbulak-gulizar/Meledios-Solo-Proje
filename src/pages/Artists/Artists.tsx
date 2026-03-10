@@ -1,7 +1,8 @@
+import ArtistsHero from "../../Components/ArtistsHeroSection/ArtistsHero";
 const Artists = () => {
   return (
     <div>
-      <h1>Welcome to the Artists Page</h1>
+      <ArtistsHero />
     </div>
   );
 };
