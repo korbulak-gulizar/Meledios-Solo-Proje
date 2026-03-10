@@ -1,7 +1,10 @@
+import AlbumSongList from "../../Components/AlbumSongList/AlbumSongList";
+import styles from "./Albums.module.scss";
+
 const Albums = () => {
   return (
-    <div>
-      <h1>Welcome to the Albums Page</h1>
+    <div className={styles.albumsPage}>
+      <AlbumSongList />
     </div>
   );
 };
