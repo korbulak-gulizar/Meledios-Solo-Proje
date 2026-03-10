@@ -1,0 +1,118 @@
+@use "/src/styles/variables" as *;
+.wrapper {
+  position: relative;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #2b72e2;
+  border-radius: 10px;
+  background: linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 50%,
+      rgba(30, 27, 27, 0.8) 101.37%
+    ),
+    linear-gradient(
+      91deg,
+      rgba(0, 0, 0, 0) 13.23%,
+      rgba(31, 30, 30, 0.8) 64.01%
+    );
+  z-index: 1;
+}
+
+/* ÜSTTE TEK SIRA */
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 30px; // ← tam istediğin boşluk
+}
+.actionBtn {
+  font-size: 24px;
+  background: transparent; // ← önemli
+  box-shadow: none; // ← önemli
+  border: none;
+  font-weight: 700px;
+  font-family: $font-primary;
+  color: white;
+  cursor: pointer;
+}
+
+/* SOLDA RESİM - SAĞDA YAZILAR */
+.content {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.left .cover {
+  width: 268px;
+  height: 268px;
+  border-radius: 10px;
+  object-fit: cover;
+  box-shadow: 7px 9px 4px 0px #00000059;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-left: 20px;
+}
+
+.title {
+  font-size: 40px;
+  font-weight: 800;
+  color: white;
+}
+.title span {
+  margin-left: 8px; // istediğin kadar boşluk
+  color: #ee10b0;
+}
+
+.artists {
+  font-size: 20px;
+  font-family: $font-primary;
+  color: white;
+  font-weight: 600;
+}
+
+.meta {
+  font-size: 20px;
+  font-family: $font-primary;
+  color: white;
+  font-weight: 600;
+}
+
+/* SAĞ ALTA PLAY ALL */
+.bottomRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  justify-content: flex-end;
+}
+
+.playAll {
+  font-family: $font-primary;
+  font-size: 24px;
+
+  border: none;
+  color: #ee10b0;
+  cursor: pointer;
+  font-weight: 600;
+
+  background: transparent; // ← önemli
+  box-shadow: none; // ← önemli
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+.playAll:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
