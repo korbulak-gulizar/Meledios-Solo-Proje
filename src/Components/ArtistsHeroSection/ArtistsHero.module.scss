@@ -1,0 +1,49 @@
+@use "/src/styles/variables" as *;
+.wrapper {
+  background-image: url("../ArtistsHeroSection/ArtistsHero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  width: 100%;
+  aspect-ratio: 1076 / 422; // ← görselin gerçek oranı
+
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 3px 12px 4px 0px #0000004d;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.rightActions {
+  display: flex;
+  align-items: center;
+  gap: 30px; // ← tam istediğin boşluk
+}
+.actionBtn {
+  font-size: 24px;
+  background: transparent; // ← önemli
+  box-shadow: none; // ← önemli
+  border: none;
+  font-weight: 700px;
+  font-family: $font-primary;
+  color: white;
+  cursor: pointer;
+}
+.title {
+  margin-top: 310px; // actions ile arasına boşluk
+  margin-left: 130px; // tamamen sola yasla
+  text-align: left;
+  letter-spacing: 4px;
+  font-size: 110px;
+  font-weight: 900;
+  font-family: $font-primary;
+  color: white;
+}
