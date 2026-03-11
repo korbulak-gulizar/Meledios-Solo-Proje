@@ -1,10 +1,15 @@
 @import "../../styles/variables.scss";
+
+.cardContainer {
+  display: flex;
+  gap: 20px;
+  cursor: pointer;
+}
 .card {
   display: grid;
-  grid-template-columns: 40px 60px 0.7fr 0.5fr 1.5fr 0.5fr;
+  grid-template-columns:  60px 0.7fr 0.5fr 1.5fr 0.5fr;
   align-items: center;
   gap: 10px;
-  padding: 16px 0;
   border-bottom: 1px solid #2a2a2a;
   color: #fff;
   font-family: $font-primary;
@@ -18,9 +23,11 @@
 
 /* Rank */
 .rank {
+  display: flex;
+  align-items: center;
   font-size: 24px;
   font-weight: 600;
-  background-color: #1a4e91;
+  color: #fff;
   font-family: $font-primary;
 }
 
@@ -37,6 +44,7 @@
   display: flex;
   flex-direction: column;
   gap: 2px;
+  padding-left: 20px;
 }
 
 .title {
@@ -74,7 +82,9 @@
 .actions {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   gap: 14px;
+  padding-right: 10px;
 }
 
 .herz {

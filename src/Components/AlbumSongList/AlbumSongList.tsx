@@ -20,6 +20,7 @@ import bbillie from "./images/bbillie.png";
 import daddy from "./images/daddy.png";
 import rolling from "./images/rolling.png";
 import oneShop from "./images/oneShop.png";
+import { useState } from "react";
 
 const AlbumSongList = () => {
   const albumsTracks = [
@@ -224,6 +225,8 @@ const AlbumSongList = () => {
       cover: oneShop,
     },
   ];
+
+  const [playingSongId, setPlayingSongId] = useState(1);
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}></div>
@@ -235,12 +238,12 @@ const AlbumSongList = () => {
         <div></div> {/* Title */}
         <div>Release date</div>
         <div>Album</div>
-        <div>Time</div>
+        <div className={styles.duration}>Time</div>
       </div>
       {/* LIST */}
       <div className={styles.list}>
         {albumsTracks.map((trend) => (
-          <AlbumSongCard key={trend.rank} {...trend} />
+          <AlbumSongCard key={trend.rank} {...trend} playingSongId={playingSongId} setPlayingSongId={setPlayingSongId} />
         ))}
       </div>
     </div>
