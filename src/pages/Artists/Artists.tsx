@@ -3,6 +3,7 @@ import ArtistsHero from "../../Components/ArtistsHeroSection/ArtistsHero";
 import ArtistsAlbumList from "../../Components/ArtistsAlbumSection/ArtistsAlbumList";
 import SingleSongsList from "../../Components/SingleSongsSection/SingleSongsList";
 import PlaylistArtistsList from "../../Components/PlaylistArtistSection/PlaylistArtistsList";
+import EminemList from "../../Components/EminemListSection/EminemList";
 
 const Artists = () => {
   return (
@@ -11,7 +12,8 @@ const Artists = () => {
       <ArtistPopularSongsList />
       <ArtistsAlbumList />
       <SingleSongsList />
-      <PlaylistArtistsList />t
+      <PlaylistArtistsList />
+      <EminemList />
     </div>
   );
 };
