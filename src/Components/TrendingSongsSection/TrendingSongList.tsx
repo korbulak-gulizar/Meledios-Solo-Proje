@@ -9,6 +9,7 @@ import Lovin from "./images/Lovin.png";
 import Pain from "./images/Pain.png";
 import Dancin from "./images/Dancin.png";
 import Water from "./images/Water.png";
+import { useState } from "react";
 
 const TrendingSongList = () => {
   const tracks = [
@@ -83,7 +84,7 @@ const TrendingSongList = () => {
       cover: Water,
     },
   ];
-
+  const [playingSongId, setPlayingSongId] = useState(1);
   return (
     <div className={styles.wrapper}>
       <div className={styles.header}>
@@ -100,12 +101,18 @@ const TrendingSongList = () => {
         <div>Release date</div>
         <div>Album</div>
         <div>Time</div>
+        <div className={styles.duration}>Time</div>
       </div>
 
       {/* LIST */}
       <div className={styles.list}>
         {tracks.map((trend) => (
-          <TrendingSongCard key={trend.rank} {...trend} />
+          <TrendingSongCard
+            key={trend.rank}
+            {...trend}
+            playingSongId={playingSongId}
+            setPlayingSongId={setPlayingSongId}
+          />
         ))}
       </div>
     </div>

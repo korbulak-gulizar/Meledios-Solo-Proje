@@ -14,7 +14,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
   padding: 16px 0;
   width: 100%;
 }
@@ -31,6 +31,11 @@
 
   margin-top: 10px;
 }
+.duration {
+  justify-self: end;
+  margin-right: 20px;
+}
+
 .listHeader div {
   transition: color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
