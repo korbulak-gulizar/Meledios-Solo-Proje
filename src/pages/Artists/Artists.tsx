@@ -2,6 +2,7 @@ import ArtistPopularSongsList from "../../Components/ArtistPopularSongsSection/A
 import ArtistsHero from "../../Components/ArtistsHeroSection/ArtistsHero";
 import ArtistsAlbumList from "../../Components/ArtistsAlbumSection/ArtistsAlbumList";
 import SingleSongsList from "../../Components/SingleSongsSection/SingleSongsList";
+import PlaylistArtistsList from "../../Components/PlaylistArtistSection/PlaylistArtistsList";
 
 const Artists = () => {
   return (
@@ -10,6 +11,7 @@ const Artists = () => {
       <ArtistPopularSongsList />
       <ArtistsAlbumList />
       <SingleSongsList />
+      <PlaylistArtistsList />t
     </div>
   );
 };
