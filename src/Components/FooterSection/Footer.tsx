@@ -6,6 +6,7 @@ import { Facebook } from "./iconsSosyal";
 import { Instagram } from "./iconsSosyal";
 import { Twitter } from "./iconsSosyal";
 import { Phone } from "./iconsSosyal";
+import TextLogo from "../TextLogo/TextLogo";
 
 const Footer: React.FC = () => {
   return (
@@ -37,7 +38,7 @@ const Footer: React.FC = () => {
         />
       </div>
       <div className={styles["social-icons"]}>
-        <h1 className={styles.melodies}>Melodies</h1>
+        <TextLogo />
         <div className={styles.iconsRow}>
           <Facebook />
           <Instagram />

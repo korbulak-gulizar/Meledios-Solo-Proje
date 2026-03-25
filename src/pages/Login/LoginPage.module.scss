@@ -1,0 +1,38 @@
+@use "/src/styles/variables" as *;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $sidebar-color;
+  color: white;
+
+  .logo {
+    width: 68px;
+    height: 77px;
+    object-fit: cover;
+    margin: 0 auto;
+  }
+  .formContainer {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+
+    .title {
+        width: 100%;
+      font-size: $h2-size;
+      font-weight: $h2-weight;
+      font-family: $font-family-h2;
+    }
+    .form {
+        width: 100%;
+  
+    }
+  }
+}

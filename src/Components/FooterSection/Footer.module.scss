@@ -44,24 +44,7 @@
   flex-direction: column; /* Melodies üstte, ikonlar altta */
   gap: 40px; /* Melodies ile ikonlar arası boşluk */
 }
-.melodies {
-  font-size: 40px;
-  font-weight: 600;
-  color: #fff;
-  text-align: center;
-  margin-top: 40px;
 
-  font-weight: 800;
-  line-height: 1.2;
-  font-family: $font-primary;
-  background: linear-gradient(
-    90.07deg,
-    #ee10b0 -4.82%,
-    rgba(14, 158, 239, 0.92) 127.01%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
 
 .iconsRow {
   display: flex;
