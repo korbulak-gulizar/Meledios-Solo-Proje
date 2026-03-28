@@ -13,6 +13,7 @@ import {
   FacebookIcon,
 } from "../../Components/Buttons/iconsButtons";
 import { useNavigate } from "react-router-dom";
+import BottomTabs from "../../Components/BottomTabs/BottomTabs";
 
 const LoginPage = () => {
   const navigate = useNavigate();
@@ -74,6 +75,7 @@ const LoginPage = () => {
             onClick={() => navigate("/createAccount")}
           />
         </div>
+        <BottomTabs />
       </div>
     </div>
   );

@@ -1,0 +1,38 @@
+.bottomTabs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  width: 100%;
+}
+.tab span {
+  color: #0e9eef; // istediğin mavi tonu
+  font-size: 14px;
+}
+.tab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  svg {
+    color: #0e9eef; // ikonun normal rengi (mavi)
+    transition: transform 0.2s ease, filter 0.2s ease, color 0.2s ease;
+  }
+
+  span {
+    color: #0e9eef;
+    transition: color 0.2s ease;
+  }
+
+  &:hover svg {
+    transform: scale(1.08);
+    color: #ff4fa3; // hover’da ikon pembe
+    filter: drop-shadow(0 0 6px #ff4fa3);
+  }
+
+  &:hover span {
+    color: #ff4fa3; // yazı da pembe
+  }
+}
