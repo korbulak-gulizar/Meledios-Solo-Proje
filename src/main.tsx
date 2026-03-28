@@ -13,6 +13,7 @@ import App from "./App.tsx";
 import Discover from "./pages/Discover/Discover.tsx";
 import Albums from "./pages/Albums/Albums.tsx";
 import Artists from "./pages/Artists/Artists.tsx";
+import LoginPage from "./pages/Login/LoginPage.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -24,7 +25,7 @@ createRoot(document.getElementById("root")!).render(
           <Route path="/albums" element={<Albums />} />
           <Route path="/artists" element={<Artists />} />
         </Route>
-        <Route path="/login" element={<p>Login Page</p>} />
+        <Route path="/login" element={<LoginPage />} />
         <Route path="/signup" element={<p>Sign Up Page</p>} />
 
         <Route path="/auth" element={<AuthLayout />} />
