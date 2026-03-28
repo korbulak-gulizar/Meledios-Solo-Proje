@@ -1,0 +1,124 @@
+@use "/src/styles/variables" as *;
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: $sidebar-color;
+  color: white;
+
+  .logo {
+    width: 68px;
+    height: 77px;
+    object-fit: cover;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .formContainer {
+    width: 400px;
+    height: 500px;
+    margin: auto;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    gap: 10px;
+
+    .title {
+      width: 100%;
+      font-size: $h2-size;
+      font-weight: $h2-weight;
+      font-family: $font-family-h2;
+    }
+    .form {
+      width: 100%;
+    }
+    .signupBtn {
+      width: 100%;
+      padding: 0.8rem;
+      color: white;
+      cursor: pointer;
+      background: #ee10b0;
+      border: none;
+
+      font-family: $font-primary;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: transform 0.2s ease;
+      height: 34px;
+      font-size: 16px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+  .paragContainer {
+    display: flex;
+    align-items: center; // dikey ortalama
+    gap: 6px; // yazı ile ikon arasına boşluk
+  }
+}
+.btnContainer {
+  display: flex;
+  align-items: center; // dikey ortalama
+  gap: 30px; // yazı ile ikon arasına boşluk
+  margin-top: 30px;
+}
+.divider {
+  display: flex;
+  align-items: center; // butonla dikey hizalama
+  justify-content: space-between;
+  gap: 1rem; // aralarına boşluk
+  color: white;
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 700;
+  //margin: 1rem 0;
+  gap: 30px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.accountinfo {
+  display: flex;
+  flex-direction: column; // h3 ve p alt alta
+  justify-content: center;
+  font-family: $font-primary;
+}
+.accountInfoTitle {
+  font-family: $font-primary;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.accountInfoText {
+  font-family: $font-primary;
+  font-weight: 400;
+  font-size: 16px;
+}
+.orDivider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  margin: 20px 0; // formdan boşluk
+}
+
+.line {
+  flex: 1;
+  height: 1px;
+  background-color: #ccc;
+}
+
+.text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #999;
+}
