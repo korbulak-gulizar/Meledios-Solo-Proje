@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./LoginPage.module.scss";
+import styles from "./CreateAccount.module.scss";
 import TextLogo from "../../Components/TextLogo/TextLogo";
 import InputField from "../../Components/InputField/InputField";
 import {
@@ -14,7 +14,7 @@ import {
 } from "../../Components/Buttons/iconsButtons";
 import { useNavigate } from "react-router-dom";
 
-const LoginPage = () => {
+const CreateAccount = () => {
   const navigate = useNavigate();
 
   return (
@@ -42,6 +42,14 @@ const LoginPage = () => {
             placeholder="Enter Your Name"
             icon={<EnvelopeIcon />}
           />
+
+          <InputField
+            label="Email"
+            placeholder="Enter Your Email"
+            type="email"
+            icon={<EnvelopeIcon />}
+          />
+
           <InputField
             label="Password"
             placeholder="Enter Your Password"
@@ -49,10 +57,18 @@ const LoginPage = () => {
             icon={<KeyIcon />}
           />
         </form>
-        <button className={styles.signupBtn}>Login</button>
+
+        <button className={styles.signupBtn} onClick={() => navigate("/login")}>
+          Login
+        </button>
         <div className={styles.paragContainer}>
           <span>Forget Password</span>
           <Arrow />
+        </div>
+        <div className={styles.orDivider}>
+          <span className={styles.line}></span>
+          <span className={styles.text}>Or</span>
+          <span className={styles.line}></span>
         </div>
         <div className={styles.btnContainer}>
           <Button variant="google" icon={<GoogleIcon />} label="Google Login" />
@@ -62,21 +78,9 @@ const LoginPage = () => {
             label="Facebook Login"
           />
         </div>
-        <div className={styles.divider}>
-          <div className={styles.accountinfo}>
-            <h3 className={styles.accountInfoTitle}>Dont Have An Account?</h3>
-            <p className={styles.accountInfoText}>Sign Up Here</p>
-          </div>
-
-          <Button
-            variant="blueSignUp"
-            label="Sign Up"
-            onClick={() => navigate("/createAccount")}
-          />
-        </div>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default CreateAccount;

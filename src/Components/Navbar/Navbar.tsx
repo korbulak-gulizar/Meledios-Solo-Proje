@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../Navbar/Navbar.module.scss";
 import Button from "../../Components/Buttons/Button";
 import { LupeIcon, HamburgerMenu, RightLupe } from "../Navbar/NavbarIcon";
-import { useNavigate } from "react-router";
+import { useNavigate } from "react-router-dom";
 
 const Navbar: React.FC<{ isSticky?: boolean }> = ({ isSticky = false }) => {
   const navigate = useNavigate();
@@ -49,7 +49,7 @@ const Navbar: React.FC<{ isSticky?: boolean }> = ({ isSticky = false }) => {
         <Button
           variant="primary"
           label="Sign Up"
-          onClick={() => navigate("/signup")}
+          onClick={() => navigate("/createAccount")}
         />
       </div>
     </header>
