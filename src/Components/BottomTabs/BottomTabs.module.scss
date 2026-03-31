@@ -36,3 +36,15 @@
     color: #ff4fa3; // yazı da pembe
   }
 }
+
+.active {
+  svg {
+    color: #ff4fa3;
+    filter: drop-shadow(0 0 6px #ff4fa3);
+  }
+
+  span {
+    color: #ff4fa3;
+  }
+
+}

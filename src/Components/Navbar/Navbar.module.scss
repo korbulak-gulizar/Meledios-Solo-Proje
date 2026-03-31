@@ -11,7 +11,7 @@
   color: white;
   backdrop-filter: blur(6px);
   -webkit-backdrop-filter: blur(6px);
-  width: calc(100% - 68px);
+  width: calc(100% - 100px);
   background-color: transparent;
   box-sizing: border-box;
   border-radius: 25px;
@@ -37,7 +37,7 @@
 }
 
 .search {
-  width: 339px;
+
   height: 38px;
   padding-left: 36px;
   border-radius: 10px;
@@ -79,14 +79,14 @@
 }
 
 /* Geniş ekran (desktop) */
-@media (min-width: 992px) {
+@media (min-width: 1000px) {
   .homePage {
     display: none; // geniş ekranda gizlenir
   }
 }
 
 /* Tablet */
-@media (max-width: 992px) {
+@media (max-width: 1000px) {
   .center {
     display: none; // menü gizlenir
   }
@@ -102,10 +102,11 @@
 }
 
 /* Mobil */
-@media (max-width: 768px) {
+@media (max-width:1000px) {
   .navbar {
     background-color: #181818;
     z-index: none;
+    width: 100%;
   }
 
   .homePage {
@@ -115,7 +116,6 @@
 
     position: relative;
     padding: 0 0px;
-    //max-width: 383px;
     width: 100%;
     margin-bottom: 90px;
   }

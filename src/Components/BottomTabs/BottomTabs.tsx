@@ -6,29 +6,32 @@ import {
   AlbumsIcons,
   LibraryIcons,
 } from "./iconsBottom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const BottomTabs = () => {
   const navigate = useNavigate();
+  const location = useLocation();
+  console.log("lokasyon", location);
+
+  const tabs = [
+    { name: "Home", icon: <HomeIcons />, path: "/" },
+    { name: "Discover", icon: <DiscoverIcons />, path: "/discover" },
+    { name: "Albums", icon: <AlbumsIcons />, path: "/albums" },
+    { name: "Artists", icon: <LibraryIcons />, path: "/artists" },
+  ];
 
   return (
     <div className={styles.bottomTabs}>
-      <div className={styles.tab} onClick={() => navigate("/")}>
-        <HomeIcons />
-        <span>Home</span>
-      </div>
-      <div className={styles.tab} onClick={() => navigate("/discover")}>
-        <DiscoverIcons />
-        <span>Discover</span>
-      </div>
-      <div className={styles.tab} onClick={() => navigate("/albums")}>
-        <AlbumsIcons />
-        <span>Albums</span>
-      </div>
-      <div className={styles.tab} onClick={() => navigate("/artists")}>
-        <LibraryIcons />
-        <span>Artists</span>
-      </div>
+      {tabs.map((tab) => (
+        <div
+          key={tab.name}
+          className={`${styles.tab} ${location.pathname === tab.path ? styles.active : ""}`}
+          onClick={() => navigate(tab.path)}
+        > 
+          {tab.icon}
+          <span>{tab.name}</span>
+        </div>
+      ))}
     </div>
   );
 };

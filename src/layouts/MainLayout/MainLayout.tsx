@@ -4,6 +4,7 @@ import menuData from "../../Components/SidebarSection/menuData";
 
 import SidebarSection from "../../Components/SidebarSection/SidebarSection";
 import { Footer } from "../../Components/FooterSection";
+import BottomTabs from "../../Components/BottomTabs/BottomTabs";
 
 export default function MainLayout() {
   return (
@@ -15,12 +16,19 @@ export default function MainLayout() {
             <SidebarSection key={index} section={section} />
           ))}
         </aside>
+        <div>
         <div className={styles.contentArea}>
           <main>
             <Outlet />
-            <Footer />
+            {/* <Footer /> */}
           </main>
         </div>
+
+        <div className={styles.bottomBar}>
+          <BottomTabs />
+        </div>
+        </div>
+        
       </div>
     </>
   );
