@@ -1,7 +1,7 @@
 @use "../../styles/variables" as *;
 
 .mainlayout {
-  width: 100%;
+  width: 100vw !important;
   margin: 0 auto;
   display: flex;
   gap: 40px;
@@ -39,6 +39,10 @@
     padding-right: 64px; /* main ile aynı hizalama */
     padding-left: 40px; /* main margin-left buraya taşındı */
     padding-top: 48px;
+    overflow: hidden;
+  }
+  .bottomBar {
+    display: none;
   }
 
   /* ---------------------- */
@@ -49,11 +53,8 @@
     width: 100%;
     background-color: $sidebar-color;
     padding-top: 5px;
-    //padding-right: 64px;
-    //margin-left: 40px;
 
     position: relative;
-    overflow: hidden;
   }
 
   /* ----------------------------------------- */
@@ -73,13 +74,31 @@
   /* ----------------------------------------- */
   /*   768px ALTINDA DAHA DA DAR VE MOBILE LAYOUT */
   /* ----------------------------------------- */
-  @media (max-width: 768px) {
+  @media (max-width: 1000px) {
     .sidebar {
+      display: none;
       width: 160px;
       padding: 32px 26px;
       margin-top: 30px;
     }
+    .bottomBar {
+      width: 100vw;
+      height: 93px;
+      background-color: #0f0f0f;
 
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: sticky;
+      padding: 0 16px;
+      bottom: 0;
+      left: 0;
+      z-index: 1000;
+      border-radius: 16px 16px 0 0;
+    }
+  }
+
+  @media (max-width: 768px) {
     main {
       margin-left: auto;
       padding-right: 12px;
