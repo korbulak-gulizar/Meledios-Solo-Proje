@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from "react";
+import type { JSX } from "react";
+import { useState, useEffect } from "react";
 import styles from "../../Components/SidebarSection/SidebarSection.module.scss";
 import {
   HomeIcon,

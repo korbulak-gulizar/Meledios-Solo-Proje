@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./CreateAccount.module.scss";
 import TextLogo from "../../Components/TextLogo/TextLogo";
 import InputField from "../../Components/InputField/InputField";

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./BottomTabs.module.scss";
 import {
   HomeIcons,

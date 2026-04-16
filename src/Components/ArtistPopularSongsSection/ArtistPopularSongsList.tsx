@@ -1,4 +1,3 @@
-import React from "react";
 import ArtistPopularSongCard from "./ArtistPopularSongsCard";
 import styles from "./ArtistPopularSongsList.module.scss";
 import godzila from "./images/godzila.png";

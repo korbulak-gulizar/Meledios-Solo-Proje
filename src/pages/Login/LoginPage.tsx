@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./LoginPage.module.scss";
 import TextLogo from "../../Components/TextLogo/TextLogo";
 import InputField from "../../Components/InputField/InputField";

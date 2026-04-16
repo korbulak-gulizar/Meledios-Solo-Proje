@@ -1,4 +1,3 @@
-import React from "react";
 import TrendingSongCard from "./TrendingSongCard";
 import styles from "./styleTrendingList.module.scss";
 import neigh from "./images/neigh.png";

@@ -1,4 +1,3 @@
-import React from "react";
 import styles from "./TextLogo.module.scss";
 
 const TextLogo = () => {
