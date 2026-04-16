@@ -1,10 +1,10 @@
 import type { HorizontalCardProps } from "./../Cards/HorizantalCard";
-import Gossip from "../MusicVideoSection/Images/Gossip.png";
-import Shape from "../MusicVideoSection/Images/Shape.png";
-import Someone from "../MusicVideoSection/Images/Someone.png";
-import shake from "../MusicVideoSection/images/shake.png";
-import newRules from "../MusicVideoSection/images/newRules.png";
-import wakaWaka from "../MusicVideoSection/images/wakaWaka.png";
+import Gossip from "./images/Gossip.png";
+import Shape from "./images/Shape.png";
+import Someone from "./images/Someone.png";
+import shake from "./images/shake.png";
+import newRules from "./images/newRules.png";
+import wakaWaka from "./images/wakaWaka.png";
 
 export const cards: HorizontalCardProps[] = [
   {
